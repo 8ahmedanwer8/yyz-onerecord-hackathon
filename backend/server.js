@@ -18,8 +18,3 @@ const server = app.listen(
   PORT,
   console.log(`Server running on PORT ${PORT}...`)
 );
-
-app.use("/api/user", userRoutes);
-
-app.use(notFound);
-app.use(errorHandler);
