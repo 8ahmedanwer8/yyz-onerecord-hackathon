@@ -1,0 +1,3 @@
+probably need a model to represent airplanes coming, model for the shipments
+inside the airplane (one record api will help with this). model for the racks that hold the shipments. lastly,
+model for the user which would be either an airline company or a warehouse.
