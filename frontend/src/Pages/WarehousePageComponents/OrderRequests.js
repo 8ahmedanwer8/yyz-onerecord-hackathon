@@ -18,7 +18,7 @@ import {
   Flex,
   Heading,
 } from "@chakra-ui/react";
-import WarehouseSidebar from "../../components/WarehouseSidebar";
+import WarehouseSidebar from "../../components/Warehouse/WarehouseSidebar";
 import "../../App.css";
 import { useHistory } from "react-router-dom";
 import { useDisclosure } from "@chakra-ui/react";
