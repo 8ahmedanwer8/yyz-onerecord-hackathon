@@ -23,7 +23,6 @@ function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [loading, setLoading] = useState(false);
-  const toast = useToast();
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordBtn, setShowPasswordBtn] = useState("hidden");
   const handleShowPasswordBtn = () => setShowPassword(!showPassword);
@@ -39,6 +38,16 @@ function Login() {
   const submitHandler = () => {
     console.log("move");
   };
+
+  function handleLogin() {
+    //this is basically our dummy login authentication lol
+    if (window.location.href == "http://localhost:3000/airlines-login") {
+      history.push("/airline/create-orders");
+    }
+    if (window.location.href == "http://localhost:3000/warehouse-login") {
+      history.push("/airline");
+    }
+  }
 
   return (
     <Box
@@ -138,6 +147,9 @@ function Login() {
             bg: "#C46C20",
             transform: "scale(0.97)",
             borderColor: "#bec3c9",
+          }}
+          onClick={() => {
+            handleLogin();
           }}
         >
           Log in

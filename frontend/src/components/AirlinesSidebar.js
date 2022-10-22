@@ -17,7 +17,7 @@ import { Button } from "@chakra-ui/button";
 import "../App.css";
 import { FcGoogle } from "react-icons/fc";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { unstable_HistoryRouter, useHistory } from "react-router-dom";
 function AirlinesSidebar() {
   const history = useHistory();
   return (
@@ -42,6 +42,9 @@ function AirlinesSidebar() {
           transform: "scale(0.97)",
           borderColor: "#bec3c9",
         }}
+        onClick={() => {
+          history.push("/airline/create-orders");
+        }}
       >
         Create Orders
       </Box>
@@ -57,6 +60,9 @@ function AirlinesSidebar() {
         textAlign="left"
         borderRadius="0"
         w="full"
+        onClick={() => {
+          history.push("/airline/manage-orders");
+        }}
         _hover={{ bg: "#9C50DB" }}
         _active={{
           // bg: "#C46C20",
