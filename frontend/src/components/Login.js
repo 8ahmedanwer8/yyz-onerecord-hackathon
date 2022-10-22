@@ -45,7 +45,7 @@ function Login() {
       history.push("/airline/create-orders");
     }
     if (window.location.href == "http://localhost:3000/warehouse-login") {
-      history.push("/airline");
+      history.push("/warehouse/order-requests");
     }
   }
 
