@@ -25,6 +25,7 @@ import { useDisclosure } from "@chakra-ui/react";
 const HomePage = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const history = useHistory();
   return (
     <Container backgroundColor="#2A2C36" p="0" h="fit-content" maxW="100%">
       <Box h="100vh">
@@ -55,6 +56,7 @@ const HomePage = () => {
                 transform: "scale(0.97)",
                 borderColor: "#bec3c9",
               }}
+              onClick={() => history.push("/warehouse-login")}
             >
               We are a Warehouse
             </Button>
@@ -72,6 +74,7 @@ const HomePage = () => {
                 borderColor: "#bec3c9",
               }}
               m="8"
+              onClick={() => history.push("/airlines-login")}
             >
               We are an Airlines
             </Button>
